@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+</head>
+<script>
+        window.onload = function() {
+
+            inputObj2 = function(str1, str2) {
+                inputt = document.getElementBy(str);
+                return inputt;
+
+            }
+
+            document.getElementById("addBtn").addEventListener(
+                "click",function() {
+            let msg = inputObj2("inputMsg").value;
+            if(msg) { //falsy value
+                const ul = inputObj2("ulList");
+                const li = document.createElement("li");
+                li.innerText = msg;
+                ul.append(li);
+                inputObj2("inputMsg").value='';
+                inputObj2("inputMsg").focus();
+            }else {
+                inputObj2("inputMsg").focus();
+            } 
+
+            });
+
+
+    }
+</script>
+<body>
+    <input type = "text" name = "msg" id = "inputMsg">
+    <button id="addBtn">추가</button>
+    <ul id ="ulList">
+        <li>하나</li>
+        <li>둘</li>
+        <li>셋</li>
+    </ul>
+</body>
+</html>

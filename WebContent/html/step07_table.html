@@ -11,7 +11,7 @@
         }
         table {
             border : 1px dotted black;
-            border-collapse: collapse;
+            border-collapse: collapse; /* 이것 때문에 <table>로 인한 줄이 사라진 것.*/
         }
         td, th {
             border : 1px dotted black;
@@ -28,7 +28,7 @@
             <col width = 300px/>
             <col width = 200px/>
         </colgroup>
-        <thead>
+        <thead> <!-- 표의 제목부분(첫번째 열)을 정해주는 태그-->
             <th>번호</th> <!-- 이렇게 컨텐츠에 대한 타이틀이 있어야 table을 쓸 수 있음
             -->
             <th>이름</th>
@@ -36,6 +36,12 @@
         </thead>
         <tbody>
             <tr>
+                <!-- 원래대로 하려면
+                <td>1</td>
+                <td>손정의></td>
+                <td>일본</td>    
+                이렇게 해야함.
+                -->
                 <td rowspan = "2">1</td>
                 <td colspan = "2">손정의</td>
             </tr>
