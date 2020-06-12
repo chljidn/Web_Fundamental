@@ -48,11 +48,13 @@
         //trim함수를 통해서 공백을 잘라냄.
         let sObj = "    This is the string      ";
         String.prototype.trim = function() {
-            // ^ = 시작하다.
+            // 2개의 역슬래시(/)사이에 정규표현식을 줌.
+            // ^ = 시작하다(행의 처음)
             // \s = 공백
             // | = or
-            // $ = 끝나다.
-            return this.replace(/(^\s)|(\s*$)/gi,"");
+            // $ = 끝나다(행의 끝)
+            // * = 앞에 나오는 문자가 나오지 않거나 하나 이상 나오는 경우(앞의 값이 0개 이상 반복하는 경우는 다 찾아줌)
+            return this.replace(/(^\s*)|(\s*$)/gi,"");
 
         }
         let str = sObj.trim();

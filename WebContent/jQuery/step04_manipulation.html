@@ -1,0 +1,46 @@
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //$('p').prepend('<strong> hi </strong>');
+            //$('<strong> Hi </strong>').prependTo('p');
+            //$('p').append('<strong> hi </strong>');
+            //$('<strong> Hi </strong>').appendTo('p');
+            //$('p').after('<strong> Hii</strong>');
+            //$('p').before('<strong> Hii</strong>');
+            //$('p').text('제이쿼리');
+            $('p').html('<strong>제이쿼리</strong>');
+            let msg1 = $('p').text();
+            let msg2 = $('p').html();
+            concole.log(msg1);
+            concole.log(msg2);
+            $('p').wrap('</div)')
+
+            $('p').remove();
+            $('p').detach();
+            $('p').remove();
+            $('p').empty();
+
+        });
+
+    </script>
+    <style>
+        div {
+            border : 1px solid blue;
+
+        }
+        p {
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+	<p>
+        <div>M</div>
+    </p>
+</body>
+</html>

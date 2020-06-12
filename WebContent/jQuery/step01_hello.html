@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        //window.onload - 밑의 둘다 onload. 아무거나 사용해도 되지만, 밑의 것이 더 짧음.
+        $(document).ready(function(){
+
+        });
+        $(function(){
+            $('.welcome').html('<p>hello jquery</p>')
+            .css("background-color","yellow");
+
+        });
+    </script>
+</head>
+<body>
+    <div class="welcome"></div>
+    <div class="welcome"></div>
+</body>
+<script>
+    $('.welcome').html('<p>hello jquery</p>')
+    .css("background-color","yellow");
+</script>
+</html>
